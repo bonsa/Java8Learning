@@ -1,7 +1,4 @@
 *.class
-target
-.idea
-Java8Learning.iml
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
@@ -15,5 +12,9 @@ Java8Learning.iml
 hs_err_pid*
 
 target
-.idea/
+.idea/workspace.xml 
+.idea/tasks.xml
+.idea/.name
+*.iml
+
 Java8Learning.iml

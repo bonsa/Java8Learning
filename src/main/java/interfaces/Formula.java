@@ -1,6 +1,6 @@
 package interfaces;
 
-/**
+/*
  * Created by kasia on 27/09/2015.
  */
 interface Formula {
