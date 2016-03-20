@@ -11,6 +11,6 @@ public class LambdaScope {
         int num = 1;
         Converter<Integer, String> stringConverter = (from) -> String.valueOf(from + num);
 
-        stringConverter.convert(2);
+        System.out.println(stringConverter.convert(2));
     }
 }
