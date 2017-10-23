@@ -50,4 +50,37 @@ public class Examples {
 
     }
 
+    public void example4() {
+        transactions.stream()
+                .map(transaction -> transaction.getTrader().getName())
+                .distinct()
+                .sorted()
+                .reduce("", (n1, n2) -> n1 + n2);
+
+    }
+
+    public void example5() {
+        transactions.stream()
+                .anyMatch(transaction -> transaction.getTrader().getName().equals("Milan"));
+    }
+
+    public void example6() {
+        transactions.stream()
+                .filter(transaction -> transaction.getTrader().getCity().equals("Cambridge"))
+                .map(transaction -> transaction.getValue())
+                .forEach(System.out::println);
+    }
+
+    public void example7() {
+        transactions.stream()
+                .map(transaction -> transaction.getValue())
+                .reduce((v1, v2) -> Integer.max(v1, v2));
+    }
+
+    public void example8() {
+        transactions.stream()
+                .reduce((t1, t2) -> t1.getValue() < t2.getValue() ? t1 : t2);
+
+    }
+
 }
